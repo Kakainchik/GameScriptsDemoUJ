@@ -1,0 +1,2 @@
+- Execute *main.sh* to run the game.
+- In case of loading saved game put an argument with the file name (like "bash main.sh saveFile.sav") when running the script.
