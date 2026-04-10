@@ -1,0 +1,3 @@
+- Copy-paste the castle.js script into the MakeCode editor in Minecraft.
+- Enter "castle" to the chat to build the castle.
+- Enter "clear" to clear the area of the castle.
