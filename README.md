@@ -4,7 +4,7 @@
 
 :white_check_mark: Zamek w Minecraft [Link do projektu](https://github.com/Kakainchik/GameScriptsDemoUJ/tree/main/Tasks/MinecraftCastle)
 
-:x: ???
+:white_check_mark: Tetris w Lua [Link do projektu](https://github.com/Kakainchik/GameScriptsDemoUJ/tree/main/Tasks/Tetris)
 
 :x: ???
 
