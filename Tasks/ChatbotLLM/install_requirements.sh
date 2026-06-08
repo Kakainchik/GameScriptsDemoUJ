@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Usage:
-# chmod +x check_env.sh
-# ./check_env.sh
+# chmod +x install_requirements.sh
+# ./install_requirements.sh
 
 set -e
 
@@ -87,14 +87,16 @@ else
     if [ ${#missing_packages[@]} -eq 0 ]; then
         echo -e "${GREEN}OK${NC} (all packages installed)"
     else
-        echo -e "${RED}MISSING${NC}"
+        echo -e "${YELLOW}MISSING${NC} - installing..."
         for pkg in "${missing_packages[@]}"; do
-            echo "       - $pkg"
+            echo -n "       Installing $pkg ... "
+            if $PY -m pip install "$pkg" &>/dev/null; then
+                echo -e "${GREEN}OK${NC}"
+            else
+                echo -e "${RED}FAILED${NC}"
+                errors=$((errors + 1))
+            fi
         done
-        echo ""
-        echo "       Install missing packages:"
-        echo "       $PY -m pip install -r $REQUIREMENTS_FILE"
-        errors=$((errors + 1))
     fi
 fi
 

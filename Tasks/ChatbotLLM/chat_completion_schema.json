@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ChatCompletionRequest",
+  "description": "JSON schema for the llama-cpp-python Chat Completion API (create_chat_completion) request parameters.",
+  "type": "object",
+  "properties": {
+    "messages": {
+      "type": "array",
+      "description": "A list of messages comprising the conversation so far.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["system", "user", "assistant"],
+            "description": "The role of the message author."
+          },
+          "content": {
+            "type": "string",
+            "description": "The content of the message."
+          }
+        },
+        "required": ["role", "content"],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "max_tokens": {
+      "type": ["integer", "null"],
+      "description": "The maximum number of tokens to generate in the chat completion. Null means generate up to context window limit.",
+      "minimum": 1,
+      "default": 256
+    },
+    "temperature": {
+      "type": "number",
+      "description": "Sampling temperature between 0 and 2. Higher values make the output more random.",
+      "minimum": 0.0,
+      "maximum": 2.0,
+      "default": 0.7
+    },
+    "top_p": {
+      "type": "number",
+      "description": "Nucleus sampling: the model considers tokens with top_p cumulative probability mass.",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "default": 0.95
+    },
+    "top_k": {
+      "type": "integer",
+      "description": "Limits token selection to the k most likely tokens at each step.",
+      "minimum": 0,
+      "default": 40
+    },
+    "repeat_penalty": {
+      "type": "number",
+      "description": "Penalizes repeated tokens. Values > 1 discourage repetition.",
+      "minimum": 0.0,
+      "default": 1.1
+    },
+    "presence_penalty": {
+      "type": "number",
+      "description": "Penalizes tokens based on whether they have appeared in the text so far.",
+      "minimum": -2.0,
+      "maximum": 2.0,
+      "default": 0.0
+    },
+    "frequency_penalty": {
+      "type": "number",
+      "description": "Penalizes tokens based on their frequency in the text so far.",
+      "minimum": -2.0,
+      "maximum": 2.0,
+      "default": 0.0
+    },
+    "stop": {
+      "description": "Up to 4 sequences where the API will stop generating further tokens.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 4
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "stream": {
+      "type": "boolean",
+      "description": "If true, partial message deltas will be sent as server-sent events.",
+      "default": false
+    },
+    "response_format": {
+      "type": ["object", "null"],
+      "description": "An object specifying the format the model must output.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["text", "json_object"],
+          "description": "The type of response format."
+        },
+        "schema": {
+          "type": ["object", "null"],
+          "description": "Optional JSON schema to constrain JSON output."
+        }
+      },
+      "default": null
+    },
+    "seed": {
+      "type": ["integer", "null"],
+      "description": "If specified, the system will attempt to produce deterministic results.",
+      "default": null
+    }
+  },
+  "required": ["messages"],
+  "additionalProperties": false
+}

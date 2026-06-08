@@ -1,0 +1,72 @@
+restaurant:
+  name: "Sultan's Feast"
+  description: "Authentic oriental cuisine with traditional recipes from the Middle East, Turkey, and Central Asia."
+
+  opening_hours:
+    monday: "10:00 - 22:00"
+    tuesday: "10:00 - 22:00"
+    wednesday: "10:00 - 22:00"
+    thursday: "10:00 - 23:00"
+    friday: "10:00 - 23:00"
+    saturday: "11:00 - 23:00"
+    sunday: "11:00 - 21:00"
+
+  menu:
+    appetizers:
+      - name: "Hummus Classic"
+        description: "Creamy chickpea dip with tahini, lemon juice, and olive oil."
+        price: 5.50
+      - name: "Baba Ganoush"
+        description: "Smoky roasted eggplant dip with tahini and garlic."
+        price: 6.00
+      - name: "Falafel Plate (6 pcs)"
+        description: "Crispy deep-fried chickpea patties served with tahini sauce."
+        price: 7.00
+      - name: "Fattoush Salad"
+        description: "Fresh salad with crispy pita chips, tomatoes, cucumbers, and sumac dressing."
+        price: 6.50
+
+    main_courses:
+      - name: "Chicken Shawarma Plate"
+        description: "Marinated chicken carved from the vertical spit, served with rice, garlic sauce, and pickles."
+        price: 12.00
+      - name: "Lamb Kofta Kebab"
+        description: "Spiced ground lamb skewers grilled over charcoal, served with bulgur pilaf."
+        price: 14.50
+      - name: "Mixed Grill Platter"
+        description: "Assortment of chicken, lamb, and beef kebabs with grilled vegetables and rice."
+        price: 18.00
+      - name: "Beef Shawarma Wrap"
+        description: "Thinly sliced marinated beef in fresh lavash with pickled turnips and tahini."
+        price: 10.50
+      - name: "Mansaf"
+        description: "Traditional Jordanian lamb cooked in fermented yogurt sauce, served over rice with almonds."
+        price: 16.00
+      - name: "Plov (Uzbek Pilaf)"
+        description: "Central Asian rice dish with tender lamb, carrots, chickpeas, and aromatic spices."
+        price: 13.50
+
+    desserts:
+      - name: "Baklava (3 pcs)"
+        description: "Layered filo pastry filled with chopped nuts and sweetened with honey syrup."
+        price: 5.00
+      - name: "Kunafa"
+        description: "Crispy shredded pastry with a molten cheese filling, soaked in rose-scented syrup."
+        price: 7.50
+      - name: "Turkish Delight Assortment"
+        description: "Soft confections in pistachio, rose, and pomegranate flavors."
+        price: 4.50
+
+    beverages:
+      - name: "Turkish Tea"
+        description: "Strong black tea served in a traditional tulip glass."
+        price: 2.50
+      - name: "Ayran"
+        description: "Chilled yogurt drink, lightly salted."
+        price: 3.00
+      - name: "Fresh Mint Lemonade"
+        description: "Freshly squeezed lemon juice with mint and a touch of sugar."
+        price: 4.00
+      - name: "Arabic Coffee (Qahwa)"
+        description: "Cardamom-infused coffee served in small cups."
+        price: 3.50

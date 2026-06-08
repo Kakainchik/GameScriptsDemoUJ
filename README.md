@@ -8,4 +8,4 @@
 
 :x: ???
 
-:x: ???
+:white_check_mark: ChatbotLLM [Link do projektu](https://github.com/Kakainchik/GameScriptsDemoUJ/tree/main/Tasks/ChatbotLLM)
